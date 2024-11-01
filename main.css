@@ -1,0 +1,223 @@
+html {
+    background-image: url('img.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #24272b;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.j {
+    font-size: 15px;
+    color: #2F3335;
+}
+
+.log {
+            display: block;
+			top:-390px;
+            unicode-bidi: embed;
+            font-family: monospace;
+            white-space: pre;
+            font-size: 15px;
+            width: 100%;
+            height: 80%;
+			text-align:left;
+			 position: relative;
+  left: 20px;
+			font-size:28px;
+			color:#FFFFFF;
+			
+			border:none;
+        }
+
+
+body {
+    background-color:#000000;
+
+
+}
+
+.btn {
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.2rem 0.1rem;
+  cursor: pointer;
+  line-height: 2rem;
+  width: 200px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: black;
+  border: 2px solid #FFFF00;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  outline: none; /* Elimina el contorno en el estado activo y enfocado */
+}
+
+.btn:hover {
+  background-color: #FFFF00;
+  color: #000;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Establece los márgenes para los botones */
+.btn:nth-child(2n) {
+  margin-right: 0;
+}
+
+/* Centra el último botón */
+.btn:last-child {
+  margin: 0 auto;
+}
+
+/* Para pantallas más pequeñas, muestra 2 botones en la fila */
+@media (max-width: 768px) {
+  .btn {
+    width: calc(50% - 10px);
+    margin-right: 5px;
+  }
+
+  /* Elimina el margen derecho del segundo botón en cada fila */
+  .btn:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+
+
+.secondary-text {
+    color: #959595;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+
+.payload-name {
+    line-height: 32px;
+    font-weight: bolder;
+}
+
+
+.payload-description {
+    color: #d1cfcf;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 22px;
+    font-size: 15px;
+}
+
+.btn:hover p.payload-description {
+    color: #666;
+}
+
+.payload-author {
+    color: #777;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 0px;
+    font-size: 0px;
+    font-weight:normal;
+}
+
+.info a {
+    color: #e3e3e3;
+}
+
+.info {
+    color: #a1a1a1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    justify-content: center;
+    text-align: center;
+    width: 45%;
+
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.opacity-transition {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden-btn {
+    padding: 0;
+    visibility: collapse;
+}
+
+.grid-container a p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* notifi */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+	
+}
+
+.toast {
+    background: black;
+    border: 2px solid yellow;
+    color: #fff;
+    padding: 10px 15px; /* Reducido el padding para hacer la notificación más pequeña */
+    border-radius: 20px; /* Mantenido el redondeo de las esquinas */
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px; /* Reducido el ancho máximo */
+    min-width: 200px; /* Reducido el ancho mínimo */
+     opacity: 0.2; /* Cambiado el valor de la opacidad a 0.8 para hacerlo un poco transparente */
+    transform: translateX(100%); /* Cambiado para que aparezca desde la derecha */
+    transition: opacity 0.4s, transform 0.4s;
+    pointer-events: none;
+
+    
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0); /* Cambiado para que aparezca desde la derecha */
+}
+
+.toast.hide {
+    opacity: 0;
+    transform: translateX(100%); /* Cambiado para que desaparezca hacia la derecha */
+}
